@@ -1,8 +1,6 @@
 version: 2
 jobs:
-  deploy:
-    environment:
-      SERVER: "176.9.105.119"
+  build:
     docker:
       - image: circleci/node:dubnium
     steps:
@@ -19,8 +17,13 @@ jobs:
       - run:
           name: Build prod
           command: npm run build:prod
-      - store_artifacts:
-          path: dist/rigs-of-rods
+      - run:
+          name: Install ncftp
+          command: apt-get install ncftp
+      - run:
+          name: Deploy build
+          command: ncftpput -R -v -u ${FTP_USER} ${FTP_PASSWORD} / dist/rigs-of-rods/*
+
 
 
 
@@ -28,7 +31,7 @@ workflows:
   version: 2
   deploy:
     jobs:
-      - deploy:
+      - build:
           filters:
             branches:
               only:
