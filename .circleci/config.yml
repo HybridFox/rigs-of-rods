@@ -3,6 +3,8 @@ jobs:
   deploy:
     environment:
       SERVER: "176.9.105.119"
+    docker:
+      - image: circleci/node:dubnium
     steps:
       - run: ssh-keyscan $SERVER >> ~/.ssh/known_hosts
       - add_ssh_keys:
