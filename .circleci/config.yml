@@ -18,11 +18,8 @@ jobs:
           name: Build prod
           command: npm run build:prod
       - run:
-          name: Install ncftp
-          command: apt-get install ncftp
-      - run:
           name: Deploy build
-          command: ncftpput -R -v -u ${FTP_USER} ${FTP_PASSWORD} / dist/rigs-of-rods/*
+          command: rsync
 
 
 
