@@ -30,7 +30,7 @@ jobs:
           command: npm run build:prod
       - run:
           name: Upload with rsync
-          command: rsync -a dist/rigs-of-rods $SSH_USER@$SSH_HOST:$SSH_DESTINATION
+          command: rsync -a -I dist/rigs-of-rods/* $SSH_USER@$SSH_HOST:$SSH_DESTINATION
 
 workflows:
   version: 2
