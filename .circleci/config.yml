@@ -1,8 +1,6 @@
 version: 2
 jobs:
   deploy:
-    machine:
-      enabled: true
     environment:
       SERVER: "176.9.105.119"
     steps:
@@ -10,19 +8,20 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "9f:2a:2a:00:43:76:68:7b:9f:63:61:54:e8:53:04:63"
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
-          name: Deploy to prod
-          command: |
-            ssh root@176.9.105.119 '/bin/bash -l -c "
-            source /root/.bashrc
-            source /root/.nvm/nvm.sh
-            cd /root/simulatorradio/nuxt
-            git checkout .
-            git checkout master
-            git pull
-            npm install
-            npm run build
-            pm2 restart sr-nuxt"'
+          name: install-dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: angular-build
+          command: npm run build:prod
+
 
 workflows:
   version: 2
