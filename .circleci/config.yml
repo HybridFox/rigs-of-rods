@@ -12,16 +12,16 @@ jobs:
             - "9f:2a:2a:00:43:76:68:7b:9f:63:61:54:e8:53:04:63"
       - checkout
       - run:
-        name: Install node
-        command: |
-          set +e
-          curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
-          export NVM_DIR="/opt/circleci/.nvm"
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          nvm install v10.16.2
-          nvm alias default v10.16.2
-          echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
-          echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"" >> $BASH_ENV
+          name: Install node
+          command: |
+            set +e
+            curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.5/install.sh | bash
+            export NVM_DIR="/opt/circleci/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            nvm install v10.16.2
+            nvm alias default v10.16.2
+            echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
+            echo "[ -s \"$NVM_DIR/nvm.sh\" ] && . \"$NVM_DIR/nvm.sh\"" >> $BASH_ENV
       - run:
           name: Install dependencies
           command: npm install
