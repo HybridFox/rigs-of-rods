@@ -89,6 +89,7 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
+              "src/.htaccess",
               "src/assets"
             ]
           }
