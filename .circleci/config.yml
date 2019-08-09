@@ -25,26 +25,9 @@ jobs:
 
 workflows:
   version: 2
-  test-and-deploy:
+  deploy:
     jobs:
-      - test-build
       - deploy:
-          requires:
-            - test-build
-          filters:
-            branches:
-              only:
-                - master
-      - purge-cache:
-          requires:
-            - deploy
-          filters:
-            branches:
-              only:
-                - master
-      - notify-dev-lounge:
-          requires:
-            - deploy
           filters:
             branches:
               only:
