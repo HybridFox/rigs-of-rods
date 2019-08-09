@@ -1,0 +1,44 @@
+.m-features {
+  margin: $spacer-3x-large 0;
+  display: flex;
+  justify-content: space-between;
+  color: $text;
+
+  .m-features__box {
+    text-align: center;
+    max-width: 300px;
+
+    svg {
+      color: $primary;
+    }
+
+    h3 {
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        height: 2px;
+        width: 30px;
+        content: "";
+        position: absolute;
+        background: #CCC;
+        left: -40px;
+        top: 10px;
+      }
+
+      &::after {
+        height: 2px;
+        width: 30px;
+        content: "";
+        position: absolute;
+        background: #CCC;
+        right: -40px;
+        top: 10px;
+      }
+    }
+
+    p {
+      line-height: 30px;
+    }
+  }
+}

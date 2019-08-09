@@ -1,0 +1,28 @@
+.a-button {
+  transition: all .2s ease;
+  border: 2px solid $text;
+  font-weight: bold;
+  line-height: 15px;
+  color: $text;
+  padding: $spacer $spacer-large !important;
+  height: 50px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+
+  &.a-button--light {
+    border-color: white;
+    color: white;
+  }
+
+  svg {
+    margin-left: $spacer-small;
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+}

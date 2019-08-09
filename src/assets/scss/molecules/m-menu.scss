@@ -1,0 +1,35 @@
+.m-menu {
+  .m-menu__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .m-menu__logo {
+        padding: $spacer 0;
+
+        img {
+          height: 50px;
+        }
+      }
+
+      li {
+        a {
+          padding: $spacer-large $spacer;
+          text-decoration: none;
+          color: $text;
+
+          &.a-button {
+            margin-left: $spacer-x-small;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.o-hero {
+  background: url(https://cdn.discordapp.com/attachments/350881616584769536/413888812448481282/screenshot_2018-02-15_19-46-13_1.png) center center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  padding: $spacer-4x-large 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $primary;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, $primary, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, $primary, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.4;
+  }
+
+  .u-container {
+    position: relative;
+  }
+
+  h1 {
+    margin-bottom: $spacer-small;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: $spacer-3x-large;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      height: 3px;
+      width: 30px;
+      right: -40px;
+      top: 10px;
+    }
+  }
+}

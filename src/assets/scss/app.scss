@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+@import "utils/variables";
+@import "utils/reset";
+@import "utils/layout";
+
+@import "organisms/o-hero.scss";
+@import "organisms/o-news.scss";
+
+@import "molecules/m-menu.scss";
+@import "molecules/m-features.scss";
+@import "molecules/m-news.scss";
+@import "molecules/m-footer.scss";
+
+@import "atoms/a-button.scss";
+@import "atoms/a-title.scss";
