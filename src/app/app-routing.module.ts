@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     component: Pages.HomePageComponent,
     path: ''
+  },
+  {
+    component: Pages.DownloadPageComponent,
+    path: 'download'
   }
 ];
 

@@ -1,16 +1,15 @@
 .m-news {
   display: flex;
-  border-radius: 20px;
-  background-color: $background-lighter;
-  overflow: hidden;
   color: $text;
   align-items: center;
   margin-bottom: $spacer-large;
 
   .m-news__cover {
     width: 400px;
-    height: 150px;
+    height: 120px;
     background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .m-news__content {

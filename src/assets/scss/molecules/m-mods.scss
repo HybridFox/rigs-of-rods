@@ -1,0 +1,34 @@
+.m-mods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .m-mods__detail {
+    margin-bottom: $spacer-x-large;
+    width: 23%;
+    color: white;
+
+    .m-mods__cover {
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .m-mods__content {
+      margin: $spacer 0;
+
+      .m-mods__title {
+        margin: 0 0 $spacer-small 0;
+        padding: 0;
+      }
+
+      .m-mods__description {
+        margin: 0;
+        padding: 0;
+        line-height: 25px;
+      }
+    }
+  }
+}
