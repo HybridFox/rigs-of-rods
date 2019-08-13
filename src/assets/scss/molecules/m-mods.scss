@@ -6,7 +6,6 @@
   .m-mods__detail {
     margin-bottom: $spacer-x-large;
     width: 23%;
-    color: white;
 
     .m-mods__cover {
       width: 100%;
@@ -22,12 +21,14 @@
       .m-mods__title {
         margin: 0 0 $spacer-small 0;
         padding: 0;
+        color: $text;
       }
 
       .m-mods__description {
         margin: 0;
         padding: 0;
         line-height: 25px;
+        color: $text-dark;
       }
     }
   }
