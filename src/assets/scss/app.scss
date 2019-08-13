@@ -4,12 +4,15 @@
 @import "utils/reset";
 @import "utils/layout";
 
+@import "pages/p-download.scss";
+
 @import "organisms/o-hero.scss";
 @import "organisms/o-news.scss";
 @import "organisms/o-repository.scss";
 @import "organisms/o-mods.scss";
 
 @import "molecules/m-menu.scss";
+@import "molecules/m-btn-group.scss";
 @import "molecules/m-features.scss";
 @import "molecules/m-news.scss";
 @import "molecules/m-footer.scss";

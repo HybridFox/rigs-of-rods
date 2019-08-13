@@ -29,6 +29,12 @@
     height: 18px;
   }
 
+  &.a-button--selected {
+    border-color: $primary;
+    position: relative;
+    z-index: 1;
+  }
+
   &:hover {
     opacity: .5;
   }
