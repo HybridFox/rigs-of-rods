@@ -1,3 +1,8 @@
 .m-footer {
-  color: white;
+  color: $text-dark;
+
+  .m-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
