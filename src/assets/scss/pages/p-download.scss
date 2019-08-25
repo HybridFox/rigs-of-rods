@@ -1,4 +1,27 @@
 .p-download {
-  background: $background-darker;
-  padding: $spacer-3x-large 0;
+  color: $text;
+
+  .p-download__itch {
+    background: $background-darker;
+    padding: $spacer-3x-large 0;
+  }
+
+  .p-download__steps {
+    display: flex;
+
+    .p-download__step {
+      width: 50%;
+      text-align: center;
+    }
+  }
+
+  .p-download__faq {
+    background: $background;
+    padding: $spacer-3x-large 0;
+  }
+
+  .p-download__legacy {
+    background: $background-darker;
+    padding: $spacer-3x-large 0;
+  }
 }
